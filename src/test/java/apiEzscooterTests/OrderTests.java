@@ -11,7 +11,6 @@ import model.Order;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.text.SimpleDateFormat;
@@ -25,7 +24,7 @@ import static org.hamcrest.Matchers.*;
 @Feature("Управление заказами")
 @DisplayName("Тесты API для работы с заказами")
 public class OrderTests {
-    private ApiOrder apiOrder = new ApiOrder();
+    private final ApiOrder apiOrder = new ApiOrder();
 
     @ParameterizedTest
     @MethodSource("courierDataLogin")
